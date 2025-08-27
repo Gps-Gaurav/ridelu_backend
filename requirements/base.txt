@@ -5,3 +5,4 @@ celery
 redis
 python-decouple
 django-cors-headers
+"django-storages[boto3]"
