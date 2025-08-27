@@ -6,144 +6,55 @@ Includes support for drivers, passengers, ride management, authentication, and r
 ---
 
 ## Project Structure
+## Project Structure
 
-├── apps
-│   ├── authentication
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-313.pyc
-│   │   │   └── models.cpython-313.pyc
-│   │   ├── api.py
-│   │   ├── migrations
-│   │   │   ├── __init__.py
-│   │   │   ├── __pycache__
-│   │   │   │   ├── __init__.cpython-313.pyc
-│   │   │   │   └── 0001_initial.cpython-313.pyc
-│   │   │   └── 0001_initial.py
-│   │   ├── models.py
-│   │   ├── permissions.py
-│   │   ├── serializers.py
-│   │   ├── services
-│   │   │   ├── __init__.py
-│   │   │   ├── google_auth.py
-│   │   │   └── otp_auth.py
-│   │   ├── tasks.py
-│   │   └── urls.py
-│   ├── drivers
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-313.pyc
-│   │   │   ├── apps.cpython-313.pyc
-│   │   │   └── models.cpython-313.pyc
-│   │   ├── api.py
-│   │   ├── apps.py
-│   │   ├── models.py
-│   │   ├── permissions.py
-│   │   ├── serializers.py
-│   │   ├── services
-│   │   │   ├── __init__.py
-│   │   │   ├── availability.py
-│   │   │   ├── earnings.py
-│   │   │   └── vehicle.py
-│   │   ├── tasks.py
-│   │   ├── urls.py
-│   │   └── views
-│   │       ├── __init__.py
-│   │       ├── auth.py
-│   │       ├── profile.py
-│   │       └── rides.py
-│   ├── passengers
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-313.pyc
-│   │   │   └── models.cpython-313.pyc
-│   │   ├── api.py
-│   │   ├── models.py
-│   │   ├── permissions.py
-│   │   ├── serializers.py
-│   │   ├── services
-│   │   │   ├── __init__.py
-│   │   │   ├── booking.py
-│   │   │   └── payment.py
-│   │   ├── tasks.py
-│   │   ├── urls.py
-│   │   └── views
-│   │       ├── __init__.py
-│   │       ├── auth.py
-│   │       ├── profile.py
-│   │       └── rides.py
-│   └── rides
-│       ├── __init__.py
-│       ├── __pycache__
-│       │   ├── __init__.cpython-313.pyc
-│       │   └── models.cpython-313.pyc
-│       ├── api.py
-│       ├── models.py
-│       ├── permissions.py
-│       ├── serializers.py
-│       ├── services
-│       │   ├── __init__.py
-│       │   ├── matching.py
-│       │   ├── pricing.py
-│       │   └── tracking.py
-│       └── tasks.py
-├── core
-│   ├── __init__.py
-│   ├── __pycache__
-│   │   └── __init__.cpython-313.pyc
-│   ├── celery.py
-│   ├── exceptions.py
-│   ├── logging.py
-│   ├── metrics.py
-│   ├── settings
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-313.pyc
-│   │   │   └── base.cpython-313.pyc
-│   │   ├── base.py
-│   │   ├── local.py
-│   │   └── production.py
-│   └── tasks
-│       ├── __init__.py
-│       ├── cleanup.py
-│       ├── notifications.py
-│       ├── payments.py
-│       └── rides.py
-├── db.sqlite3
-├── manage.py
-├── README.md
-├── requirements
-│   ├── base.txt
-│   ├── local.txt
-│   └── production.txt
-├── requirements.txt
-├── ridelu_backend
-│   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-313.pyc
-│   │   ├── urls.cpython-313.pyc
-│   │   └── wsgi.cpython-313.pyc
-│   ├── asgi.py
-│   ├── urls.py
-│   └── wsgi.py
-└── shared
-    ├── __init__.py
-    ├── __pycache__
-    │   └── __init__.cpython-313.pyc
-    ├── cache.py
-    ├── constants.py
-    ├── location
-    │   ├── __init__.py
-    │   └── distance.py
-    ├── notifications
-    │   ├── __init__.py
-    │   ├── email.py
-    │   ├── push.py
-    │   └── sms.py
-    └── utils.py
-
----
-
+- apps
+  - authentication
+    - __init__.py
+    - models.py
+    - api.py
+  - drivers
+    - models.py
+  - passengers
+    - models.py
+  - rides
+    - models.py
+- core
+  - settings
+    - base.py
+    - local.py
+    - production.py
+  - celery.py
+  - exceptions.py
+  - logging.py
+  - metrics.py
+  - tasks
+    - cleanup.py
+    - notifications.py
+    - payments.py
+    - rides.py
+- shared
+  - utils.py
+  - cache.py
+  - constants.py
+  - location
+    - distance.py
+  - notifications
+    - email.py
+    - push.py
+    - sms.py
+- manage.py
+- db.sqlite3
+- requirements
+  - base.txt
+  - local.txt
+  - production.txt
+- requirements.txt
+- ridelu_backend
+  - __init__.py
+  - asgi.py
+  - urls.py
+  - wsgi.py
 
 ---
 
