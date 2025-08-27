@@ -8,38 +8,96 @@ Includes support for drivers, passengers, ride management, authentication, and r
 ## Project Structure
 ## Project Structure
 
+## Project Structure
+
 - apps
   - authentication
     - __init__.py
     - models.py
     - api.py
+    - permissions.py
+    - serializers.py
+    - tasks.py
+    - urls.py
+    - services
+      - __init__.py
+      - google_auth.py
+      - otp_auth.py
   - drivers
+    - __init__.py
     - models.py
+    - api.py
+    - apps.py
+    - permissions.py
+    - serializers.py
+    - tasks.py
+    - urls.py
+    - services
+      - __init__.py
+      - availability.py
+      - earnings.py
+      - vehicle.py
+    - views
+      - __init__.py
+      - auth.py
+      - profile.py
+      - rides.py
   - passengers
+    - __init__.py
     - models.py
+    - api.py
+    - permissions.py
+    - serializers.py
+    - tasks.py
+    - urls.py
+    - services
+      - __init__.py
+      - booking.py
+      - payment.py
+    - views
+      - __init__.py
+      - auth.py
+      - profile.py
+      - rides.py
   - rides
+    - __init__.py
     - models.py
+    - api.py
+    - permissions.py
+    - serializers.py
+    - tasks.py
+    - services
+      - __init__.py
+      - matching.py
+      - pricing.py
+      - tracking.py
 - core
-  - settings
-    - base.py
-    - local.py
-    - production.py
+  - __init__.py
   - celery.py
   - exceptions.py
   - logging.py
   - metrics.py
+  - settings
+    - __init__.py
+    - base.py
+    - local.py
+    - production.py
   - tasks
+    - __init__.py
     - cleanup.py
     - notifications.py
     - payments.py
     - rides.py
 - shared
+  - __init__.py
   - utils.py
   - cache.py
   - constants.py
   - location
+    - __init__.py
     - distance.py
   - notifications
+    - __init__.py
     - email.py
     - push.py
     - sms.py
@@ -56,7 +114,7 @@ Includes support for drivers, passengers, ride management, authentication, and r
   - urls.py
   - wsgi.py
 
----
+
 
 ## Features
 
