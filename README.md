@@ -3,11 +3,6 @@
 A scalable, modular Django-based backend for a ride-hailing platform.  
 Includes support for drivers, passengers, ride management, authentication, and real-time services.
 
----
-
-## Project Structure
-## Project Structure
-
 ## Project Structure
 
 - apps
@@ -115,7 +110,6 @@ Includes support for drivers, passengers, ride management, authentication, and r
   - wsgi.py
 
 
-
 ## Features
 
 - Authentication: OTP login and Google OAuth support
@@ -127,9 +121,8 @@ Includes support for drivers, passengers, ride management, authentication, and r
 - Environment-specific settings: Local and production separation
 - Modular architecture: Shared utilities and domain-driven apps
 
----
 
-### Create virtual environment
+## Create virtual environment
 
 python -m venv .venv
 source .venv/bin/activate
@@ -145,7 +138,6 @@ pip install -r requirements/base.txt
 
 pip install -r requirements/local.txt
 
-
 ## Production:
 
 pip install -r requirements/production.txt
@@ -154,6 +146,7 @@ Apply migrations
 python manage.py migrate
 
 ## Run development server
+
 python manage.py runserver
 
 ## Tech Stack
