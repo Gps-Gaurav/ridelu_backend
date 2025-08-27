@@ -1,0 +1,7 @@
+Django>=5.0
+djangorestframework
+psycopg2-binary   # Postgres driver
+celery
+redis
+python-decouple
+django-cors-headers
